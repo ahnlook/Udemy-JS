@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Components</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        --color-primary: lightblue;
+        font-family: sans-serif;
+      }
+
+      lily-tooltip {
+        /* border: 1px solid blue;
+        padding: 0.15rem; */
+      }
+
+      .highlight {
+        /* background-color: #f7d28e; */
+      }
+    </style>
+    <script src="tooltip.js"></script>
+    <script src="confirm-link.js"></script>
+  </head>
+  <body>
+    <p>
+      <lily-tooltip
+        class="important"
+        text="web Components is a set of standards."
+      >
+        <!-- 아래 코드는 light dom이다. -->
+        <span class="highlight">Web Components</span>
+      </lily-tooltip>
+      are awesome!
+    </p>
+    <lily-tooltip></lily-tooltip>
+    <a is="lily-confirm-link" href="https://www.google.com">google</a>
+  </body>
+</html>
